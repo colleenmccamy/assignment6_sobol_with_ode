@@ -227,11 +227,11 @@ results_sens |>
 ### Reporting sobel indices 
 
 ```{r}
-library(gt)
-
+# getting analysis
 max_growth <- tell(sens_params,
                    results_sens$max_growth) 
 
+# adding row names to first order
 rownames(max_growth$S) <- c("k", "r", "g", "thresh")
 
 print("First Order Indices")
@@ -240,6 +240,8 @@ max_growth$S
 ```
 
 ```{r}
+
+# adding row names to second order
 rownames(max_growth$T) <- c("k", "r", "g", "thresh")
 
 print("Second Order Indices")
